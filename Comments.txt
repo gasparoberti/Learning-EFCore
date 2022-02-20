@@ -1,0 +1,24 @@
+
+DatabaseFirst:
+https://www.entityframeworktutorial.net/entityframework6/introduction.aspx
+
+Scaffold-DbContext "Data Source=DESKTOP-C8449RA\SQLEXPRESS;Initial Catalog=bd_prueba;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+entre paréntesis va el conection string y Models es la carpeta en la cual creará las clases a partir de la bd.
+
+
+CodeFirst:
+https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx
+
+Crear las clases.
+
+Crear el dbContext con tantos dbsets como tablas tenga.
+
+Seleccionar en la consola de nuget el proyecto específico en el que quiero correr los comandos.
+Add-Migration InitialMigration
+Update-Database
+
+Si quiero realizar algun cambio en las clases debo generar otra migración para que se pueda actualizar la bd.
+
+
+OBSERVACIÓN: TENER EN CUENTA QUE EL NOMBRE DE LA TABLA ES EL NOMBRE DEL DBSET DEL CONTEXT. POR LO TANTO SI NO COINCIDEN VA A DAR ERROR PARA ACCEDER A LA BASE 
